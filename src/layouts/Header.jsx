@@ -5,23 +5,23 @@ import H1 from "@/components/Headings/H1";
 
 function Header() {
   const location = useLocation();
+  console.log(location.pathname);
   let heading;
 
   switch (location.pathname) {
     case "/":
       heading = "Dashboard";
       break;
-
     default:
-      heading = "error";
+      heading =
+        location.pathname.replace("/", "").charAt(0).toUpperCase() +
+        location.pathname.slice(2);
       break;
   }
 
   return (
     <header className="bg-secondary text-primary-text border-b border-border  h-16 w-full text-primary flex justify-between px-8 items-center">
-      <H1>
-        {heading}
-      </H1>
+      <H1>{heading}</H1>
       <ThemeToggle />
     </header>
   );

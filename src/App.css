@@ -13,6 +13,7 @@
   --color-warning: rgb(245, 158, 11); /* amber */
   --color-danger: rgb(239, 68, 68); /* red */
   --color-sale: rgb(236, 72, 153); /* pink */
+  --select: #dbeafe;
 
   /* Structural */
   --border: rgb(226, 232, 240);
@@ -31,6 +32,7 @@
   --color-warning: rgb(251, 191, 36);
   --color-danger: rgb(248, 113, 113);
   --color-sale: rgb(244, 114, 182);
+  --select: #002b5f;
 
   /* Structural */
   --border: rgb(51, 65, 85);
@@ -42,7 +44,7 @@
 
   --color-primary-text: var(--text-primary);
   --color-secondary-text: var(--text-secondary);
-
+  --color-select: var(--select);
   --color-info: var(--color-info);
   --color-success: var(--color-success);
   --color-warning: var(--color-warning);
