@@ -3,14 +3,18 @@ import React, { useState } from "react";
 import { SunIcon } from "@/components/ui/sun-icon";
 import { MoonIcon } from "@/components/ui/moon-icon";
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
-
+  const [theme, setTheme] = useState("light");
   function handleClick() {
-    document.documentElement.classList.toggle("dark");
-    setIsDark((prev) => (prev === false ? true : false));
+    const root = document.documentElement;
+    const current = root.getAttribute("data-theme") || "light";
+    const next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    setTheme(next);
   }
   return (
-    <button onClick={handleClick}>{isDark ? <SunIcon /> : <MoonIcon />}</button>
+    <button onClick={handleClick}>
+      {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+    </button>
   );
 }
 

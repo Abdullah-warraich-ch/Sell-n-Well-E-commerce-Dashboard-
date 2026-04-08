@@ -5,15 +5,15 @@ import Sidebar from "./Sidebar";
 
 function RootLayout() {
   return (
-    <>
-      <div>
+    <div className="flex h-screen w-full">
+      <div className="w-1/4 border-r border-border h-screen">
         <Sidebar />
       </div>
-      <div>
+      <div className="w-full">
         <Header />
         <Outlet />
       </div>
-    </>
+    </div>
   );
 }
 

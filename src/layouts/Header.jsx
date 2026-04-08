@@ -1,7 +1,30 @@
 import React from "react";
+import { useLocation } from "react-router";
+import ThemeToggle from "@/features/theme/ThemeToggle";
+import H1 from "@/components/Headings/H1";
 
 function Header() {
-  return <header>Header</header>;
+  const location = useLocation();
+  let heading;
+
+  switch (location.pathname) {
+    case "/":
+      heading = "Dashboard";
+      break;
+
+    default:
+      heading = "error";
+      break;
+  }
+
+  return (
+    <header className="bg-secondary text-primary-text border-b border-border  h-16 w-full text-primary flex justify-between px-8 items-center">
+      <H1>
+        {heading}
+      </H1>
+      <ThemeToggle />
+    </header>
+  );
 }
 
 export default Header;

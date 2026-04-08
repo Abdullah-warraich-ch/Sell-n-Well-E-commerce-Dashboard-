@@ -1,0 +1,11 @@
+import React from "react";
+
+function H1({ children }) {
+  return (
+    <h1 className="text-[18px] leading-7 text-primary-text font-medium ">
+      {children}
+    </h1>
+  );
+}
+
+export default H1;
