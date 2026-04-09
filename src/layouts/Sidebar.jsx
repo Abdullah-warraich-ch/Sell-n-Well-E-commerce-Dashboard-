@@ -3,7 +3,7 @@ import H1 from "@/components/Headings/H1";
 import Nav from "./Nav";
 function Sidebar() {
   return (
-    <aside className="bg-secondary px-4 h-full flex flex-col">
+    <aside className="bg-secondary  h-full flex flex-col ">
       <div className="shrink-0 h-16 border-b border-border text-primary-text text-center flex items-center justify-center ">
         <H1>Admin</H1>
       </div>

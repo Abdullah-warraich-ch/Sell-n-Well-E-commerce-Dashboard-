@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 
 function RootLayout() {
   return (
-    <div className="flex h-screen w-full">
+    <div className="flex h-screen w-full overflow-hidden">
       <div className="w-1/4 border-r border-border h-screen">
         <Sidebar />
       </div>

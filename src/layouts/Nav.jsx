@@ -9,11 +9,9 @@ import {
   Megaphone,
 } from "lucide-react";
 
-// import { useMatch, useLocation } from "react-router";
-
 function Nav() {
   return (
-    <nav>
+    <nav className="pr-4">
       <NavLink to="/" icon={<LayoutDashboard size={20} />} text="Dashboard" />
       <NavLink to="/orders" icon={<ShoppingBag size={20} />} text="Orders" />
       <NavLink to="/products" icon={<Box size={20} />} text="Products" />

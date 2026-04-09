@@ -20,7 +20,7 @@ function Header() {
   }
 
   return (
-    <header className="bg-secondary text-primary-text border-b border-border  h-16 w-full text-primary flex justify-between px-8 items-center">
+    <header className=" bg-secondary text-primary-text border-b border-border  h-16 w-full text-primary flex justify-between px-8 items-center">
       <H1>{heading}</H1>
       <ThemeToggle />
     </header>
