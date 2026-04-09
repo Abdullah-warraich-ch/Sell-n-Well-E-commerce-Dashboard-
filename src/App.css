@@ -2,6 +2,7 @@
 @import "tailwindcss";
 :root {
   --bg-primary: rgb(248, 250, 252);
+  --input: rgb(240, 240, 240);
   --bg-secondary: rgb(255, 255, 255);
 
   --text-primary: rgb(15, 23, 42);
@@ -23,6 +24,8 @@
 }
 [data-theme="dark"] {
   --bg-primary: rgb(2, 6, 23); /* slate-950 */
+  --input: rgb(15, 20, 43);
+
   --bg-secondary: rgb(15, 23, 42); /* slate-900 */
 
   --text-primary: rgb(241, 245, 249);
@@ -58,6 +61,7 @@
   --color-border: var(--border);
   --color-button: var(--button);
   --color-button-text: var(--button-text);
+  --color-input: var(--input);
 }
 
 .home-scrollbar {
