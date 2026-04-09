@@ -59,4 +59,30 @@
   --color-button: var(--button);
   --color-button-text: var(--button-text);
 }
+
+.home-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text-secondary) 45%, transparent)
+    transparent;
+}
+
+.home-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.home-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.home-scrollbar::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text-secondary) 38%, transparent);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+}
+
+.home-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--text-primary) 42%, transparent);
+  background-clip: padding-box;
+}
 /*  */

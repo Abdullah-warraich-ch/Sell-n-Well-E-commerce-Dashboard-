@@ -1,11 +1,17 @@
+import { Handbag, ShoppingBag, Truck } from "lucide-react";
 import React from "react";
 
 function OrderContainerHome() {
   return (
-    <div className="p-6 bg-secondary rounded-[14px] border border-border">
+    <div className=" relative p-6 bg-secondary rounded-[14px] border border-border">
       <h1 className="mb-5 text-[16px] text-primary-text font-medium leading-6">
         Recent Orders
       </h1>
+      <Handbag
+        className="absolute right-50 opacity-10 rotate-45"
+        size={200}
+        color="black"
+      />
       <div className=" py-4 flex justify-between border-b border-b-border">
         <div>
           <h1 className="text-[16px] text-primary-text font-medium leading-6">

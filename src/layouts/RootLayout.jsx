@@ -6,12 +6,22 @@ import Sidebar from "./Sidebar";
 function RootLayout() {
   return (
     <div className="flex h-screen w-full overflow-hidden">
-      <div className="w-1/4 border-r border-border h-screen">
+      {/* Sidebar */}
+      <div className="w-1/6 border-r border-border shrink-0">
         <Sidebar />
       </div>
-      <div className="w-full">
-        <Header />
-        <Outlet />
+
+      {/* Right Section */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <div className="h-16 shrink-0">
+          <Header />
+        </div>
+
+        {/* Scrollable Outlet */}
+        <div className="flex-1 overflow-y-auto home-scrollbar">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
