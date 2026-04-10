@@ -2,11 +2,14 @@ import React from "react";
 
 function Card({ title, subheading, desc, icon: Icon, color }) {
   return (
-    <div className=" p-6 bg-secondary rounded-[14px] flex flex-col gap-10 shadow border-border w-[24%]">
+    <div className=" p-6 bg-secondary rounded-[14px] flex flex-col gap-10 hover:shadow-lg border-l-4 border border-border border-l-blue-500 w-[24%]">
       <div className="flex justify-between text-[14px] font-medium leading-5 text-secondary-text">
         {title}
-        <div className="">
-          <Icon size={20} color={color} />
+        <div
+          style={{ "--bg": color }}
+          className="bg-[color-mix(in_srgb,var(--bg)_15%,transparent)] p-3 rounded-lg"
+        >
+          <Icon size={15} color={color} />
         </div>
       </div>
       <div>
