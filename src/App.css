@@ -1,48 +1,46 @@
 @import "tailwindcss";
 :root {
-  --bg-primary: rgb(248, 250, 252);
-  --input: rgb(240, 240, 240);
+  --bg-primary: rgb(244, 247, 251);
+  --input: rgb(237, 242, 247);
   --bg-secondary: rgb(255, 255, 255);
 
-  --text-primary: rgb(15, 23, 42);
-  --text-secondary: rgb(71, 85, 105);
+  --text-primary: rgb(17, 24, 39);
+  --text-secondary: rgb(96, 107, 123);
 
   /* UI Colors */
-  --color-info: rgb(37, 99, 235); /* blue */
-  --color-success: rgb(22, 163, 74); /* green */
-  --color-warning: rgb(217, 119, 6); /* amber */
-  --color-danger: rgb(220, 38, 38); /* red */
-  --color-sale: rgb(219, 39, 119); /* pink */
-  --select: rgb(219, 234, 254);
+  --color-info: rgb(43, 92, 221);
+  --color-success: rgb(29, 148, 95);
+  --color-warning: rgb(201, 122, 36);
+  --color-danger: rgb(209, 63, 63);
+  --color-sale: rgb(190, 71, 126);
+  --select: rgb(228, 236, 255);
 
   /* Structural */
-  --border: rgb(203, 213, 225);
-  --shadow: rgba(15, 23, 42, 0.08);
-  --button: black;
-  --button-text: white;
+  --border: rgb(217, 224, 234);
+  --shadow: rgba(20, 27, 45, 0.08);
+  --button: rgb(22, 28, 45);
+  --button-text: rgb(248, 250, 252);
 }
 [data-theme="dark"] {
-  --bg-primary: rgb(2, 6, 23); /* slate-950 */
-  --input: rgb(15, 20, 43);
+  --bg-primary: rgb(10, 14, 26);
+  --input: rgb(19, 26, 44);
 
-  --bg-secondary: rgb(15, 23, 42); /* slate-900 */
+  --bg-secondary: rgb(16, 24, 39);
 
   --text-primary: rgb(241, 245, 249);
-  --text-secondary: rgb(148, 163, 184);
+  --text-secondary: rgb(150, 163, 184);
 
-  /* UI Colors (slightly brighter for dark mode visibility) */
-  --color-info: rgb(96, 165, 250);
-  --color-success: rgb(74, 222, 128);
-  --color-warning: rgb(250, 204, 21);
-  --color-danger: rgb(248, 113, 113);
-  --color-sale: rgb(244, 114, 182);
-  --select: rgb(30, 64, 175);
+  --color-info: rgb(106, 154, 255);
+  --color-success: rgb(79, 201, 145);
+  --color-warning: rgb(242, 179, 86);
+  --color-danger: rgb(255, 127, 127);
+  --color-sale: rgb(235, 124, 173);
+  --select: rgb(34, 48, 87);
 
-  /* Structural */
-  --border: rgb(51, 65, 85);
-  --shadow: rgba(0, 0, 0, 0.45);
-  --button: white;
-  --button-text: black;
+  --border: rgb(45, 58, 82);
+  --shadow: rgba(0, 0, 0, 0.5);
+  --button: rgb(241, 245, 249);
+  --button-text: rgb(15, 23, 42);
 }
 @theme {
   --color-primary: var(--bg-primary);

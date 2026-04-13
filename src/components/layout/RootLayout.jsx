@@ -6,6 +6,19 @@ import Sidebar from "./Sidebar";
 function RootLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
+  React.useEffect(() => {
+    if (!isSidebarOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isSidebarOpen]);
+
   return (
     <div className="flex min-h-screen w-full flex-col overflow-hidden lg:h-screen lg:flex-row">
       <div className="hidden shrink-0 border-r border-border lg:block lg:w-72">

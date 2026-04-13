@@ -10,28 +10,28 @@ function StatsOverview() {
         subheading="Rs. 58987"
         desc="+12.5% from last month"
         icon={DollarSign}
-        color="green"
+        color="var(--color-success)"
       />
       <StatsCard
         title="Active Orders"
         subheading="4"
         desc="+12.5% from last month"
         icon={ShoppingBag}
-        color="blue"
+        color="var(--color-info)"
       />
       <StatsCard
         title="Products"
         subheading="58"
         desc="Accross 3 Categories"
         icon={Box}
-        color="purple"
+        color="var(--color-sale)"
       />
       <StatsCard
         title="Low Stock"
         subheading="3"
         desc="Products Below 50 Units"
         icon={TrendingDown}
-        color="red"
+        color="var(--color-danger)"
       />
     </div>
   );

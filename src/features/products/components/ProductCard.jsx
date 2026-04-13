@@ -13,9 +13,9 @@ function ProductCard({
 }) {
   return (
     <article className="overflow-hidden rounded-[22px] border border-border bg-secondary shadow-sm min-w-0">
-      <div className="relative h-48 sm:h-52 overflow-hidden bg-amber-300">
+      <div className="relative h-48 sm:h-52 overflow-hidden bg-[color-mix(in_srgb,var(--color-warning)_18%,white)]">
         <img src={image} alt={name} className="h-full w-full object-cover" />
-        <span className="absolute top-4 left-4 rounded-full bg-orange-500 px-3 py-1 text-[11px] font-semibold tracking-[0.01em] text-white">
+        <span className="absolute top-4 left-4 rounded-full bg-warning px-3 py-1 text-[11px] font-semibold tracking-[0.01em] text-white">
           {status}
         </span>
       </div>

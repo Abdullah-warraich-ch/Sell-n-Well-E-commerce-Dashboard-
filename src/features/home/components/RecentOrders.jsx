@@ -10,7 +10,7 @@ function RecentOrders() {
       <Handbag
         className="absolute -right-6 top-10 opacity-10 rotate-45 hidden lg:block"
         size={200}
-        color="black"
+        color="var(--text-primary)"
       />
       <div className="py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-b-border">
         <div>

@@ -1,13 +1,16 @@
 import React from "react";
 import { X } from "lucide-react";
-import H1 from "@/components/typography/H1";
 import Nav from "./Nav";
 
 function Sidebar({ onNavigate }) {
   return (
     <aside className="bg-secondary h-full flex flex-col">
       <div className="shrink-0 h-16 border-b border-border text-primary-text flex items-center justify-between px-4 lg:justify-center lg:px-0">
-        <H1>Admin</H1>
+        <img
+          src="/ayn.png"
+          alt="AYN"
+          className="h-9 w-auto object-contain"
+        />
         <button
           type="button"
           onClick={onNavigate}
