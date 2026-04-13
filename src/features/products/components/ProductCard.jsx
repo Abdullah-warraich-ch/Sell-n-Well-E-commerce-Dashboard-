@@ -1,35 +1,61 @@
 import React from "react";
-import Button from "@/components/common/Button";
+import { Trash2 } from "lucide-react";
+import ConfirmAlertDialog from "@/components/common/ConfirmAlertDialog";
 
-function ProductCard() {
+function ProductCard({
+  name,
+  category,
+  price,
+  stock,
+  description,
+  status,
+  image,
+}) {
   return (
-    <div className="rounded-xl bg-secondary shadow-md overflow-hidden w-80">
-      <img
-        src="https://images.unsplash.com/photo-1588514912908-8f5891714f8d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Perfume"
-        className="h-1/3"
-      />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">Perfume</h3>
-        <p className="text-xs p-0.5 px-2 border-border  rounded-2xl border inline-block font-medium ">
-          Men's
-        </p>
-        <p className="text-[14px] text-secondary-text leading-5 font-normal">
-          Premium wireless headphones with noise cancellation
-        </p>
-        <div className="mt-2 flex items-center justify-between">
-          <p className="text-sm text-primary-text font-bold text-[20px] leading-7">
-            $49.99
-          </p>
-          <p className="text-sm text-gray-500">Status: 45</p>
+    <article className="overflow-hidden rounded-[22px] border border-border bg-secondary shadow-sm">
+      <div className="relative h-52 overflow-hidden bg-amber-300">
+        <img src={image} alt={name} className="h-full w-full object-cover" />
+        <span className="absolute top-4 left-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-medium text-white">
+          {status}
+        </span>
+      </div>
+
+      <div className="space-y-5 px-5 py-6">
+        <div>
+          <h3 className="text-[1.1rem] font-medium tracking-tight text-primary-text leading-7">
+            {name}
+          </h3>
+          <span className="mt-3 inline-block rounded-xl border border-border bg-primary px-3 py-1 text-[12px] leading-4font-medium text-secondary-text">
+            {category}
+          </span>
         </div>
+
+        <p className="max-w-[28ch] text-[14px] leading-5  text-secondary-text">
+          {description}
+        </p>
+
+        <div className="flex items-end justify-between">
+          <p className="text-[1.1rem] font-bold tracking-tight text-primary-text leading-7">
+            ${price}
+          </p>
+          <p className="text-sm text-secondary-text">Stock: {stock}</p>
+        </div>
+
+        <ConfirmAlertDialog
+          title={`Delete ${name}?`}
+          description="This will remove the product from the dashboard inventory view. You can wire the actual delete action next."
+          actionLabel="Delete Product"
+        >
+          <button
+            type="button"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-danger px-4 py-2 text-[14px] font-medium text-white transition hover:bg-danger/85"
+          >
+            <Trash2 size={16} />
+            Delete
+          </button>
+        </ConfirmAlertDialog>
       </div>
-      <div className="p-4">
-        <button className="w-full bg-danger text-white py-2 rounded-lg hover:bg-danger/80 transition-colors duration-300">
-          Delete
-        </button>
-      </div>
-    </div>
+    </article>
   );
 }
 
