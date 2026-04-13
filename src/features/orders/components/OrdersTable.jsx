@@ -4,13 +4,13 @@ import { SelectAlignItem } from "@/components/forms/Selector";
 function OrdersTable() {
   return (
     <div className="bg-secondary p-4 sm:p-6 lg:p-8 rounded-2xl border border-border">
-      <h1 className="mb-4 leading-4 text-[16px] text-primary-text font-medium">
+      <h1 className="mb-4 text-[18px] leading-7 text-primary-text font-semibold tracking-[-0.02em]">
         Orders(4)
       </h1>
       <div className="overflow-x-auto">
       <table className="w-full min-w-[760px]">
         <thead className="text-left">
-          <tr className="border-b border-border font-bold text-[14px] leading-5 text-secondary-text   ">
+          <tr className="border-b border-border text-[13px] font-semibold tracking-[0.01em] leading-5 text-secondary-text">
             <th className="p-2 ">Order ID</th>
             <th>Customer</th>
             <th>Date</th>
@@ -21,12 +21,12 @@ function OrdersTable() {
           </tr>
         </thead>
         <tbody>
-          <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-4 py-6 font-medium text-primary-text">#12345</td>
-            <td className="font-medium text-primary-text">John Doe</td>
-            <td className="font-light text-secondary-text">2024-06-01</td>
-            <td className="font-light text-secondary-text">3</td>
-            <td className="font-medium text-primary-text">Rs. 1500</td>
+          <tr className="border-b border-border/20 hover:bg-primary text-[15px] leading-6">
+            <td className="p-4 py-6 font-semibold tracking-[-0.01em] text-primary-text">#12345</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">John Doe</td>
+            <td className="font-medium text-secondary-text">2024-06-01</td>
+            <td className="font-medium text-secondary-text">3</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Rs. 1500</td>
             <td className="font-medium text-primary-text">Processing</td>
             <td className="w-1/6">
               <SelectAlignItem
@@ -36,12 +36,12 @@ function OrdersTable() {
               />
             </td>
           </tr>
-          <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-4 py-6 font-medium text-primary-text">#12346</td>
-            <td className="font-medium text-primary-text">Jane Smith</td>
-            <td className="font-light text-secondary-text">2024-06-02</td>
-            <td className="font-light text-secondary-text">2</td>
-            <td className="font-medium text-primary-text">Rs. 1000</td>
+          <tr className="border-b border-border/20 hover:bg-primary text-[15px] leading-6">
+            <td className="p-4 py-6 font-semibold tracking-[-0.01em] text-primary-text">#12346</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Jane Smith</td>
+            <td className="font-medium text-secondary-text">2024-06-02</td>
+            <td className="font-medium text-secondary-text">2</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Rs. 1000</td>
             <td className="font-medium text-primary-text">Shipped</td>
             <td className="w-1/6">
               <SelectAlignItem
@@ -51,12 +51,12 @@ function OrdersTable() {
               />
             </td>
           </tr>
-          <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-4 py-6 font-medium text-primary-text">#12347</td>
-            <td className="font-medium text-primary-text">Bob Johnson</td>
-            <td className="font-light text-secondary-text">2024-06-03</td>
-            <td className="font-light text-secondary-text">1</td>
-            <td className="font-medium text-primary-text">Rs. 500</td>
+          <tr className="border-b border-border/20 hover:bg-primary text-[15px] leading-6">
+            <td className="p-4 py-6 font-semibold tracking-[-0.01em] text-primary-text">#12347</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Bob Johnson</td>
+            <td className="font-medium text-secondary-text">2024-06-03</td>
+            <td className="font-medium text-secondary-text">1</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Rs. 500</td>
             <td className="font-medium text-primary-text">Delivered</td>
             <td className="w-1/6">
               <SelectAlignItem
@@ -66,12 +66,12 @@ function OrdersTable() {
               />
             </td>
           </tr>
-          <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-4 py-6 font-medium text-primary-text">#12348</td>
-            <td className="font-medium text-primary-text">Alice Williams</td>
-            <td className="font-light text-secondary-text">2024-06-04</td>
-            <td className="font-light text-secondary-text">4</td>
-            <td className="font-medium text-primary-text">Rs. 2000</td>
+          <tr className="border-b border-border/20 hover:bg-primary text-[15px] leading-6">
+            <td className="p-4 py-6 font-semibold tracking-[-0.01em] text-primary-text">#12348</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Alice Williams</td>
+            <td className="font-medium text-secondary-text">2024-06-04</td>
+            <td className="font-medium text-secondary-text">4</td>
+            <td className="font-semibold tracking-[-0.01em] text-primary-text">Rs. 2000</td>
             <td className="font-medium text-primary-text">Cancelled</td>
             <td className="w-1/6">
               <SelectAlignItem

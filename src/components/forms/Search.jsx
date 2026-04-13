@@ -9,7 +9,7 @@ function Search({ placeholder }) {
       </div>
       <input
         type="text"
-        className="bg-input text-secondary-text p-2 rounded-lg text-[14px] border border-transparent pl-10 w-full focus:border-button focus:outline-0"
+        className="bg-input text-primary-text placeholder:text-secondary-text/90 p-2 rounded-lg text-[14px] leading-5 font-medium border border-transparent pl-10 w-full focus:border-button focus:outline-0"
         placeholder={placeholder}
       />
     </div>
