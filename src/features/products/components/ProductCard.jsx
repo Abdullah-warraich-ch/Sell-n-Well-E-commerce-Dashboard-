@@ -12,15 +12,15 @@ function ProductCard({
   image,
 }) {
   return (
-    <article className="overflow-hidden rounded-[22px] border border-border bg-secondary shadow-sm">
-      <div className="relative h-52 overflow-hidden bg-amber-300">
+    <article className="overflow-hidden rounded-[22px] border border-border bg-secondary shadow-sm min-w-0">
+      <div className="relative h-48 sm:h-52 overflow-hidden bg-amber-300">
         <img src={image} alt={name} className="h-full w-full object-cover" />
         <span className="absolute top-4 left-4 rounded-full bg-orange-500 px-3 py-1 text-xs font-medium text-white">
           {status}
         </span>
       </div>
 
-      <div className="space-y-5 px-5 py-6">
+      <div className="space-y-5 px-4 sm:px-5 py-5 sm:py-6">
         <div>
           <h3 className="text-[1.1rem] font-medium tracking-tight text-primary-text leading-7">
             {name}
@@ -30,7 +30,7 @@ function ProductCard({
           </span>
         </div>
 
-        <p className="max-w-[28ch] text-[14px] leading-5  text-secondary-text">
+        <p className="max-w-[28ch] text-[14px] leading-5 text-secondary-text">
           {description}
         </p>
 

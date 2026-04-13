@@ -9,18 +9,44 @@ import {
   Megaphone,
 } from "lucide-react";
 
-function Nav() {
+function Nav({ onNavigate }) {
   return (
-    <nav className="pr-4">
-      <NavLink to="/" icon={<LayoutDashboard size={20} />} text="Dashboard" />
-      <NavLink to="/orders" icon={<ShoppingBag size={20} />} text="Orders" />
-      <NavLink to="/products" icon={<Box size={20} />} text="Products" />
-      <NavLink to="/categories" icon={<Tag size={20} />} text="Categories" />
-      <NavLink to="/sales" icon={<Percent size={20} />} text="Sales" />
+    <nav className="space-y-1 px-3 lg:px-0 lg:pr-4">
+      <NavLink
+        to="/"
+        icon={<LayoutDashboard size={20} />}
+        text="Dashboard"
+        onClick={onNavigate}
+      />
+      <NavLink
+        to="/orders"
+        icon={<ShoppingBag size={20} />}
+        text="Orders"
+        onClick={onNavigate}
+      />
+      <NavLink
+        to="/products"
+        icon={<Box size={20} />}
+        text="Products"
+        onClick={onNavigate}
+      />
+      <NavLink
+        to="/categories"
+        icon={<Tag size={20} />}
+        text="Categories"
+        onClick={onNavigate}
+      />
+      <NavLink
+        to="/sales"
+        icon={<Percent size={20} />}
+        text="Sales"
+        onClick={onNavigate}
+      />
       <NavLink
         to="/announcements"
         icon={<Megaphone size={20} />}
         text="Announcements"
+        onClick={onNavigate}
       />
     </nav>
   );

@@ -4,24 +4,37 @@ import Header from "./Header";
 import Sidebar from "./Sidebar";
 
 function RootLayout() {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+
   return (
-    <div className="flex h-screen w-full overflow-hidden">
-      {/* Sidebar */}
-      <div className="w-1/6 border-r border-border shrink-0">
+    <div className="flex min-h-screen w-full flex-col overflow-hidden lg:h-screen lg:flex-row">
+      <div className="hidden shrink-0 border-r border-border lg:block lg:w-72">
         <Sidebar />
       </div>
 
-      {/* Right Section */}
-      <div className="flex-1 flex flex-col">
-        {/* Header */}
+      <div className="flex min-w-0 flex-1 flex-col">
         <div className="h-16 shrink-0">
-          <Header />
+          <Header onMenuClick={() => setIsSidebarOpen(true)} />
         </div>
 
-        {/* Scrollable Outlet */}
-        <div className="flex-1 overflow-y-auto home-scrollbar">
+        <div className="flex-1 overflow-y-auto overflow-x-hidden home-scrollbar">
           <Outlet />
         </div>
+      </div>
+
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      <div
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r border-border bg-secondary transition-transform duration-300 lg:hidden ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <Sidebar onNavigate={() => setIsSidebarOpen(false)} />
       </div>
     </div>
   );

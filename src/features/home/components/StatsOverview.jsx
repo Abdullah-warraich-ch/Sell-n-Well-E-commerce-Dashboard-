@@ -4,7 +4,7 @@ import StatsCard from "./StatsCard";
 
 function StatsOverview() {
   return (
-    <div className=" flex justify-between">
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
       <StatsCard
         title="Total Revenue"
         subheading="Rs. 58987"

@@ -3,16 +3,16 @@ import React from "react";
 
 function RecentOrders() {
   return (
-    <div className=" relative p-6 bg-secondary rounded-[14px] border border-border">
+    <div className="relative p-4 sm:p-6 bg-secondary rounded-[14px] border border-border overflow-hidden">
       <h1 className="mb-5 text-[16px] text-primary-text font-medium leading-6">
         Recent Orders
       </h1>
       <Handbag
-        className="absolute right-50 opacity-10 rotate-45"
+        className="absolute -right-6 top-10 opacity-10 rotate-45 hidden lg:block"
         size={200}
         color="black"
       />
-      <div className=" py-4 flex justify-between border-b border-b-border">
+      <div className="py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-b-border">
         <div>
           <h1 className="text-[16px] text-primary-text font-medium leading-6">
             Muhammad Abdullah
@@ -21,7 +21,7 @@ function RecentOrders() {
             abdullahnasar333@gmail.com
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center justify-between sm:justify-start">
           <div>
             <h3 className="text-[16px] text-primary-text font-medium leading-6">
               Rs. 5878
@@ -37,7 +37,7 @@ function RecentOrders() {
           </div>
         </div>
       </div>
-      <div className=" py-4 flex justify-between border-b border-b-border">
+      <div className="py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-b-border">
         <div>
           <h1 className="text-[16px] text-primary-text font-medium leading-6">
             Muhammad Abdullah
@@ -46,7 +46,7 @@ function RecentOrders() {
             abdullahnasar333@gmail.com
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center justify-between sm:justify-start">
           <div>
             <h3 className="text-[16px] text-primary-text font-medium leading-6">
               Rs. 5878
@@ -62,7 +62,7 @@ function RecentOrders() {
           </div>
         </div>
       </div>
-      <div className=" py-4 flex justify-between border-b border-b-border">
+      <div className="py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-b-border">
         <div>
           <h1 className="text-[16px] text-primary-text font-medium leading-6">
             Muhammad Abdullah
@@ -71,7 +71,7 @@ function RecentOrders() {
             abdullahnasar333@gmail.com
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center justify-between sm:justify-start">
           <div>
             <h3 className="text-[16px] text-primary-text font-medium leading-6">
               Rs. 5878
@@ -87,7 +87,7 @@ function RecentOrders() {
           </div>
         </div>
       </div>
-      <div className=" py-4 flex justify-between border-b border-b-border">
+      <div className="py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-b-border">
         <div>
           <h1 className="text-[16px] text-primary-text font-medium leading-6">
             Muhammad Abdullah
@@ -96,7 +96,7 @@ function RecentOrders() {
             abdullahnasar333@gmail.com
           </p>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-3 items-center justify-between sm:justify-start">
           <div>
             <h3 className="text-[16px] text-primary-text font-medium leading-6">
               Rs. 5878

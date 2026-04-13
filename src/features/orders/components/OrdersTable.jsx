@@ -3,12 +3,13 @@ import { SelectAlignItem } from "@/components/forms/Selector";
 
 function OrdersTable() {
   return (
-    <div className="bg-secondary p-8 rounded-2xl border border-border">
+    <div className="bg-secondary p-4 sm:p-6 lg:p-8 rounded-2xl border border-border">
       <h1 className="mb-4 leading-4 text-[16px] text-primary-text font-medium">
         Orders(4)
       </h1>
-      <table className="w-full ">
-        <thead className="text-left ">
+      <div className="overflow-x-auto">
+      <table className="w-full min-w-[760px]">
+        <thead className="text-left">
           <tr className="border-b border-border font-bold text-[14px] leading-5 text-secondary-text   ">
             <th className="p-2 ">Order ID</th>
             <th>Customer</th>
@@ -82,6 +83,7 @@ function OrdersTable() {
           </tr>
         </tbody>
       </table>
+      </div>
     </div>
   );
 }

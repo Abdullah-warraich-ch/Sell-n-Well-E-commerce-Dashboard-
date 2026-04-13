@@ -12,7 +12,7 @@ import {
 
 export function SelectAlignItem({ list, defaultValue, defaultValueText }) {
   return (
-    <FieldGroup className="w-full max-w-xs">
+    <FieldGroup className="w-full max-w-xs sm:min-w-44">
       <Field>
         <Select defaultValue={defaultValue}>
           <SelectTrigger className="w-full border-0 bg-input p-5 font-medium text-primary-text shadow-none focus-visible:border-0 focus-visible:ring-0">
