@@ -2,6 +2,7 @@ import Button from "@/components/common/Button";
 import Search from "@/components/forms/Search";
 import { SelectAlignItem } from "@/components/forms/Selector";
 import AddProductDialog from "@/features/products/components/AddProductDialog";
+import ProductCard from "@/features/products/components/ProductCard";
 import React from "react";
 
 function Products() {
@@ -25,6 +26,9 @@ function Products() {
             Add Products
           </Button>
         </div>
+      </div>
+      <div className="mt-8">
+        <ProductCard />
       </div>
     </div>
   );
