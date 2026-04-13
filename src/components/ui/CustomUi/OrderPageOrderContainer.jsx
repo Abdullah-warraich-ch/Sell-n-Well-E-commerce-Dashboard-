@@ -1,4 +1,5 @@
 import React from "react";
+import { SelectAlignItem } from "@/components/ui/CustomUi/Selector";
 
 function OrderPageOrderContainer() {
   return (
@@ -20,40 +21,64 @@ function OrderPageOrderContainer() {
         </thead>
         <tbody>
           <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-3 font-medium text-primary-text">#12345</td>
+            <td className="p-4 py-6 font-medium text-primary-text">#12345</td>
             <td className="font-medium text-primary-text">John Doe</td>
             <td className="font-light text-secondary-text">2024-06-01</td>
             <td className="font-light text-secondary-text">3</td>
             <td className="font-medium text-primary-text">Rs. 1500</td>
-            <td>Processing</td>
-            <td>Nill</td>
+            <td className="font-medium text-primary-text">Processing</td>
+            <td className="w-1/6">
+              <SelectAlignItem
+                list={["Delivered", "Processing", "Shipped"]}
+                defaultValue="pending"
+                defaultValueText="Pending"
+              />
+            </td>
           </tr>
           <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-3 font-medium text-primary-text">#12346</td>
+            <td className="p-4 py-6 font-medium text-primary-text">#12346</td>
             <td className="font-medium text-primary-text">Jane Smith</td>
             <td className="font-light text-secondary-text">2024-06-02</td>
             <td className="font-light text-secondary-text">2</td>
             <td className="font-medium text-primary-text">Rs. 1000</td>
             <td className="font-medium text-primary-text">Shipped</td>
-            <td>Nill</td>
+            <td className="w-1/6">
+              <SelectAlignItem
+                list={["Delivered", "Processing", "Shipped"]}
+                defaultValue="pending"
+                defaultValueText="Pending"
+              />
+            </td>
           </tr>
           <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-3 font-medium text-primary-text">#12347</td>
+            <td className="p-4 py-6 font-medium text-primary-text">#12347</td>
             <td className="font-medium text-primary-text">Bob Johnson</td>
             <td className="font-light text-secondary-text">2024-06-03</td>
             <td className="font-light text-secondary-text">1</td>
             <td className="font-medium text-primary-text">Rs. 500</td>
             <td className="font-medium text-primary-text">Delivered</td>
-            <td>Nill</td>
+            <td className="w-1/6">
+              <SelectAlignItem
+                list={["Delivered", "Processing", "Shipped"]}
+                defaultValue="pending"
+                defaultValueText="Pending"
+              />
+            </td>
           </tr>
           <tr className="border-b border-border/20 hover:bg-primary  text-[16px] leading-6    ">
-            <td className="p-3 font-medium text-primary-text">#12348</td>
+            <td className="p-4 py-6 font-medium text-primary-text">#12348</td>
             <td className="font-medium text-primary-text">Alice Williams</td>
             <td className="font-light text-secondary-text">2024-06-04</td>
             <td className="font-light text-secondary-text">4</td>
             <td className="font-medium text-primary-text">Rs. 2000</td>
             <td className="font-medium text-primary-text">Cancelled</td>
-            <td>Nill</td>
+            <td className="w-1/6">
+              <SelectAlignItem
+                list={["Delivered", "Processing", "Shipped"]}
+                defaultValue="pending"
+                defaultValueText="Pending"
+              />
+            </td>
           </tr>
         </tbody>
       </table>
