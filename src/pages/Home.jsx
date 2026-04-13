@@ -1,8 +1,8 @@
-import Card from "@/components/ui/CustomUi/Card";
 import React from "react";
 import { Info } from "lucide-react";
-import CardContainerHome from "@/components/ui/CustomUi/CardContainerHome";
-import OrderContainerHome from "@/components/ui/CustomUi/OrderContainerHome";
+import StatsOverview from "@/features/home/components/StatsOverview";
+import RecentOrders from "@/features/home/components/RecentOrders";
+
 function Home() {
   return (
     <div className=" p-8 flex flex-col gap-10">
@@ -12,8 +12,8 @@ function Home() {
           2 active announcements displayed to customers
         </p>
       </div>
-      <CardContainerHome />
-      <OrderContainerHome />
+      <StatsOverview />
+      <RecentOrders />
     </div>
   );
 }

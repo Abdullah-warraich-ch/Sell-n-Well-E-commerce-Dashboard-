@@ -1,7 +1,7 @@
 import React from "react";
-import { SelectAlignItem } from "@/components/ui/CustomUi/Selector";
+import { SelectAlignItem } from "@/components/forms/Selector";
 
-function OrderPageOrderContainer() {
+function OrdersTable() {
   return (
     <div className="bg-secondary p-8 rounded-2xl border border-border">
       <h1 className="mb-4 leading-4 text-[16px] text-primary-text font-medium">
@@ -86,4 +86,4 @@ function OrderPageOrderContainer() {
   );
 }
 
-export default OrderPageOrderContainer;
+export default OrdersTable;

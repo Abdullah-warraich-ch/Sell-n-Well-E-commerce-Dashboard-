@@ -1,7 +1,7 @@
 import { Handbag, ShoppingBag, Truck } from "lucide-react";
 import React from "react";
 
-function OrderContainerHome() {
+function RecentOrders() {
   return (
     <div className=" relative p-6 bg-secondary rounded-[14px] border border-border">
       <h1 className="mb-5 text-[16px] text-primary-text font-medium leading-6">
@@ -116,4 +116,4 @@ function OrderContainerHome() {
   );
 }
 
-export default OrderContainerHome;
+export default RecentOrders;

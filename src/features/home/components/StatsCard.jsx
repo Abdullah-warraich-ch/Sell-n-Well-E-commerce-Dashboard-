@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card({ title, subheading, desc, icon: Icon, color }) {
+function StatsCard({ title, subheading, desc, icon: Icon, color }) {
   return (
     <div className=" p-6 bg-secondary rounded-[14px] flex flex-col gap-10 hover:shadow-lg border-l-4 border border-border border-l-blue-500 w-[24%]">
       <div className="flex justify-between text-[14px] font-medium leading-5 text-secondary-text">
@@ -24,4 +24,4 @@ function Card({ title, subheading, desc, icon: Icon, color }) {
   );
 }
 
-export default Card;
+export default StatsCard;

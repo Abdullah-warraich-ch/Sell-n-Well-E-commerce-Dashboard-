@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import RootLayout from "@/layouts/RootLayout";
-import Home from "@/screens/Home";
-import Orders from "@/screens/Orders";
-import Products from "@/screens/Products";
-import Categories from "@/screens/Categories";
-import Sales from "@/screens/Sales";
-import Announce from "@/screens/Announce";
+import RootLayout from "@/components/layout/RootLayout";
+import Home from "@/pages/Home";
+import Orders from "@/pages/Orders";
+import Products from "@/pages/Products";
+import Categories from "@/pages/Categories";
+import Sales from "@/pages/Sales";
+import Announce from "@/pages/Announce";
 
 const router = createBrowserRouter([
   {

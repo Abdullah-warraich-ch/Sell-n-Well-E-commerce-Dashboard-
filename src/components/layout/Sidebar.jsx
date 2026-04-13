@@ -1,5 +1,5 @@
 import React from "react";
-import H1 from "@/components/Headings/H1";
+import H1 from "@/components/typography/H1";
 import Nav from "./Nav";
 function Sidebar() {
   return (

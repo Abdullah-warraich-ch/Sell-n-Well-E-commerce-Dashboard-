@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router";
 import ThemeToggle from "@/features/theme/ThemeToggle";
-import H1 from "@/components/Headings/H1";
+import H1 from "@/components/typography/H1";
 
 function Header() {
   const location = useLocation();

@@ -1,7 +1,7 @@
 import "./App.css";
 import ThemeToggle from "./features/theme/ThemeToggle";
 import { RouterProvider } from "react-router";
-import router from "./Routes/route";
+import router from "./app/router";
 
 function App() {
   return <RouterProvider router={router} />;

@@ -1,6 +1,6 @@
-import OrderPageOrderContainer from "@/components/ui/CustomUi/OrderPageOrderContainer";
-import Search from "@/components/ui/CustomUi/Search";
-import { SelectAlignItem } from "@/components/ui/CustomUi/Selector";
+import Search from "@/components/forms/Search";
+import { SelectAlignItem } from "@/components/forms/Selector";
+import OrdersTable from "@/features/orders/components/OrdersTable";
 import React from "react";
 
 function Orders() {
@@ -14,7 +14,7 @@ function Orders() {
           defaultValueText="All Status"
         />
       </div>
-      <OrderPageOrderContainer />
+      <OrdersTable />
     </div>
   );
 }
