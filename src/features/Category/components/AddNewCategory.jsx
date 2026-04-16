@@ -36,7 +36,7 @@ function AddNewCategory({ open, onOpenChange }) {
                 <input
                   type="text"
                   placeholder="e.g. Winter Collection"
-                  className="w-full rounded-xl border border-border bg-primary px-3.5 py-3 text-[14px] font-medium text-primary-text outline-none transition-all focus:border-info focus:ring-2 focus:ring-[color-mix(in_srgb,var(--color-info)_20%,transparent)] hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)]"
+                  className="w-full rounded-xl border border-border bg-primary px-3.5 py-3 text-[14px] font-medium text-primary-text outline-none transition-all focus:border-button focus:ring-2 focus:ring-button/20 hover:border-button/40"
                 />
               </div>
 
@@ -47,7 +47,7 @@ function AddNewCategory({ open, onOpenChange }) {
                 <textarea
                   rows="3"
                   placeholder="Brief description of the category..."
-                  className="w-full rounded-xl border border-border bg-primary px-3.5 py-3 text-[14px] font-medium text-primary-text outline-none transition-all focus:border-info focus:ring-2 focus:ring-[color-mix(in_srgb,var(--color-info)_20%,transparent)] hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)] resize-none"
+                  className="w-full rounded-xl border border-border bg-primary px-3.5 py-3 text-[14px] font-medium text-primary-text outline-none transition-all focus:border-button focus:ring-2 focus:ring-button/20 hover:border-button/40 resize-none"
                 />
               </div>
 

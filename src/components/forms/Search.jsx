@@ -9,7 +9,7 @@ function Search({ placeholder }) {
       </div>
       <input
         type="text"
-        className="bg-secondary text-primary-text placeholder:text-secondary-text/70 py-3 rounded-xl text-[14px] font-medium border border-border pl-11 pr-4 w-full focus:border-info focus:ring-2 focus:ring-info/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)] h-[46px]"
+        className="bg-secondary text-primary-text placeholder:text-secondary-text/70 py-3 rounded-xl text-[14px] font-medium border border-border pl-11 pr-4 w-full focus:border-button focus:ring-2 focus:ring-button/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--bg-button)_40%,transparent)] h-[46px]"
         placeholder={placeholder}
       />
     </div>

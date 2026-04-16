@@ -15,7 +15,7 @@ export function SelectAlignItem({ list, defaultValue, defaultValueText }) {
     <FieldGroup className="w-full max-w-xs sm:min-w-44">
       <Field>
         <Select defaultValue={defaultValue}>
-          <SelectTrigger className="w-full bg-secondary border border-border p-3 rounded-xl text-[14px] font-medium text-primary-text shadow-sm focus:border-info focus:ring-2 focus:ring-info/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)] h-[46px] data-[state=open]:border-info">
+          <SelectTrigger className="w-full bg-secondary border border-border p-3 rounded-xl text-[14px] font-medium text-primary-text shadow-sm focus:border-button focus:ring-2 focus:ring-button/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--bg-button)_40%,transparent)] h-[46px] data-[state=open]:border-button">
             <SelectValue />
           </SelectTrigger>
           <SelectContent
