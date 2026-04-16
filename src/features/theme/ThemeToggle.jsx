@@ -12,7 +12,7 @@ function ThemeToggle() {
     setTheme(next);
   }
   return (
-    <button onClick={handleClick}>
+    <button onClick={handleClick} className="flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_srgb,var(--text-primary)_5%,transparent)] text-secondary-text hover:bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] hover:text-info transition-colors">
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
   );

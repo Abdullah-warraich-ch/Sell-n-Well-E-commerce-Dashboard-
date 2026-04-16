@@ -1,5 +1,6 @@
 import { Handbag, ArrowRight, ExternalLink } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router";
 
 const ordersData = [
   { id: "#4892", name: "Muhammad Abdullah", email: "abdullahnasar333@gmail.com", amount: "Rs. 5878", items: 3, status: "Delivered", statusColor: "success" },
@@ -9,6 +10,7 @@ const ordersData = [
 ];
 
 function RecentOrders() {
+  const navigate = useNavigate();
   const getBadgeColor = (type) => {
     switch (type) {
       case 'success': return 'text-[var(--color-success)] bg-[color-mix(in_srgb,var(--color-success)_10%,transparent)] border-[color-mix(in_srgb,var(--color-success)_20%,transparent)]';
@@ -29,7 +31,7 @@ function RecentOrders() {
             Latest 4 orders across your store.
           </p>
         </div>
-        <button className="text-[13px] font-bold text-info hover:text-[color-mix(in_srgb,var(--color-info)_80%,transparent)] flex items-center gap-1 transition-colors px-3 py-1.5 rounded-lg hover:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)]">
+        <button onClick={() => navigate("/orders")} className="text-[13px] font-bold text-info hover:text-[color-mix(in_srgb,var(--color-info)_80%,transparent)] flex items-center gap-1 transition-colors px-3 py-1.5 rounded-lg hover:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)]">
           View All <ArrowRight size={14} className="ml-0.5" />
         </button>
       </div>

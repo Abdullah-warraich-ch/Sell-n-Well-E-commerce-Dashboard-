@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { Plus, ArrowRight, Megaphone, BarChart2 } from "lucide-react";
 
 function QuickShortcut() {
+  const navigate = useNavigate();
   return (
     <div className="xl:col-span-1">
       <div className="p-5 sm:p-7 bg-secondary rounded-[16px] border border-border shadow-sm h-full flex flex-col">
@@ -13,7 +15,7 @@ function QuickShortcut() {
         </p>
 
         <div className="flex flex-col gap-3">
-          <button className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-bold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
+          <button onClick={() => navigate("/products")} className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-bold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
             <span className="flex items-center gap-3">
               <div className="p-2 bg-[color-mix(in_srgb,var(--text-primary)_10%,transparent)] rounded-lg text-primary-text group-hover:bg-info group-hover:text-white transition-colors">
                 <Plus size={18} />
@@ -26,7 +28,7 @@ function QuickShortcut() {
             />
           </button>
 
-          <button className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-bold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
+          <button onClick={() => navigate("/announcements")} className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-bold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
             <span className="flex items-center gap-3">
               <div className="p-2 bg-[color-mix(in_srgb,var(--text-primary)_10%,transparent)] rounded-lg text-primary-text group-hover:bg-warning group-hover:text-white transition-colors">
                 <Megaphone size={18} />
@@ -39,7 +41,7 @@ function QuickShortcut() {
             />
           </button>
 
-          <button className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-semibold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
+          <button onClick={() => navigate("/sales")} className="w-full text-left p-4 bg-primary rounded-xl text-[14px] font-semibold text-primary-text hover:bg-[color-mix(in_srgb,var(--color-info)_5%,transparent)] border border-transparent hover:border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] transition-all flex justify-between items-center group">
             <span className="flex items-center gap-3">
               <div className="p-2 bg-[color-mix(in_srgb,var(--text-primary)_8%,transparent)] rounded-[10px] text-primary-text group-hover:bg-success group-hover:text-white transition-colors">
                 <BarChart2 size={18} />

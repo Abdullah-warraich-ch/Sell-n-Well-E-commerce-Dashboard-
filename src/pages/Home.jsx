@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import { Info, ArrowRight, Plus, Megaphone, BarChart2 } from "lucide-react";
 import StatsOverview from "@/features/home/components/StatsOverview";
 import RecentOrders from "@/features/home/components/RecentOrders";
 import QuickShortcut from "@/features/home/components/QuickShortcut";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <div className="p-4 sm:p-6 lg:p-8 flex flex-col gap-6 sm:gap-8 min-h-full animate-in fade-in duration-500">
       {/* Dashboard Header section */}
@@ -18,7 +20,7 @@ function Home() {
           </p>
         </div>
 
-        <div className="flex p-3 gap-3 items-center bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] border border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] rounded-xl shadow-sm transition-all hover:bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] group cursor-pointer w-fit md:w-auto">
+        <div onClick={() => navigate("/announcements")} className="flex p-3 gap-3 items-center bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] border border-[color-mix(in_srgb,var(--color-info)_20%,transparent)] rounded-xl shadow-sm transition-all hover:bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] group cursor-pointer w-fit md:w-auto">
           <Info className="text-info" size={20} />
           <p className="text-[13px] font-semibold text-primary-text">
             2 active announcements

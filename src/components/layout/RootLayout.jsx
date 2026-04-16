@@ -37,13 +37,13 @@ function RootLayout() {
 
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm lg:hidden"
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-[2px] transition-opacity lg:hidden"
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
 
       <div
-        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r border-border bg-secondary transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] border-r border-border bg-secondary shadow-2xl transition-transform duration-300 ease-out lg:hidden ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

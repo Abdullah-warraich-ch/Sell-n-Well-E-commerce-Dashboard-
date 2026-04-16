@@ -19,17 +19,17 @@ function Header({ onMenuClick }) {
   }
 
   return (
-    <header className="bg-secondary/80 backdrop-blur-md text-primary-text border-b border-border h-16 w-full flex justify-between px-4 sm:px-6 lg:px-8 items-center sticky top-0 z-30 transition-all">
+    <header className="bg-secondary/70 backdrop-blur-lg text-primary-text border-b border-border h-16 w-full flex justify-between px-4 sm:px-6 items-center sticky top-0 z-30 transition-all">
       <div className="flex items-center gap-4">
         <button
           type="button"
           onClick={onMenuClick}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary hover:bg-[color-mix(in_srgb,var(--bg-primary)_80%,transparent)] text-primary-text lg:hidden transition-colors"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_srgb,var(--text-primary)_5%,transparent)] hover:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] hover:text-info text-primary-text lg:hidden transition-colors"
         >
           <Menu size={20} />
         </button>
         {heading && (
-          <h1 className="text-[17px] font-bold tracking-tight text-primary-text">{heading}</h1>
+          <h1 className="text-[17px] font-semibold tracking-tight text-primary-text">{heading}</h1>
         )}
       </div>
       <ThemeToggle />
