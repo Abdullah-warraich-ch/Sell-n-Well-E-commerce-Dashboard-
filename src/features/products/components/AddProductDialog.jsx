@@ -294,7 +294,7 @@ function AddProductDialog({ open, onOpenChange }) {
                 </DialogPrimitive.Close>
                 <button
                   type="submit"
-                  className="rounded-md bg-button px-4 py-2.5 text-sm font-medium text-button-text transition hover:bg-button/80"
+                  className="rounded-xl bg-button px-5 py-2.5 text-[14px] font-semibold text-button-text shadow-sm transition-all hover:bg-button/80 hover:shadow-md"
                 >
                   Add Perfume
                 </button>

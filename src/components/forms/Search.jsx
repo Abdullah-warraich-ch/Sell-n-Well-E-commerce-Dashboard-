@@ -3,13 +3,13 @@ import React from "react";
 
 function Search({ placeholder }) {
   return (
-    <div className="relative w-full ">
-      <div className="text-secondary-text absolute left-4 top-3">
-        <SearchIcon size={15} />
+    <div className="relative w-full group">
+      <div className="text-secondary-text absolute left-4 top-1/2 -translate-y-1/2 group-focus-within:text-info transition-colors">
+        <SearchIcon size={18} />
       </div>
       <input
         type="text"
-        className="bg-input text-primary-text placeholder:text-secondary-text/90 p-2 rounded-lg text-[14px] leading-5 font-medium border border-transparent pl-10 w-full focus:border-button focus:outline-0"
+        className="bg-secondary text-primary-text placeholder:text-secondary-text/70 py-3 rounded-xl text-[14px] font-medium border border-border pl-11 pr-4 w-full focus:border-info focus:ring-2 focus:ring-info/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)] h-[46px]"
         placeholder={placeholder}
       />
     </div>

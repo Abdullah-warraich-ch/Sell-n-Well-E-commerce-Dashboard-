@@ -1,9 +1,10 @@
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-function Button({ children, ...rest }) {
+function Button({ children, className, ...rest }) {
   return (
     <button
-      className="text-nowrap bg-button text-button-text hover:bg-button/80 text-sm font-semibold tracking-[-0.01em] rounded-md px-4 py-2.5 transition-colors duration-300"
+      className={twMerge("text-nowrap bg-button text-button-text hover:bg-button/80 text-[14px] font-semibold tracking-wide rounded-xl px-4 py-2.5 transition-all duration-300 flex items-center justify-center gap-2", className)}
       {...rest}
     >
       {children}

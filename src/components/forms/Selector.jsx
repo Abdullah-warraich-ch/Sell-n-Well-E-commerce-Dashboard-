@@ -15,30 +15,32 @@ export function SelectAlignItem({ list, defaultValue, defaultValueText }) {
     <FieldGroup className="w-full max-w-xs sm:min-w-44">
       <Field>
         <Select defaultValue={defaultValue}>
-          <SelectTrigger className="w-full border-0 bg-input p-5 text-[14px] leading-5 font-medium tracking-[-0.01em] text-primary-text shadow-none focus-visible:border-0 focus-visible:ring-0">
+          <SelectTrigger className="w-full bg-secondary border border-border p-3 rounded-xl text-[14px] font-medium text-primary-text shadow-sm focus:border-info focus:ring-2 focus:ring-info/20 outline-none transition-all hover:border-[color-mix(in_srgb,var(--color-info)_40%,transparent)] h-[46px] data-[state=open]:border-info">
             <SelectValue />
           </SelectTrigger>
           <SelectContent
             position="popper"
-            className="border-border border shadow shadow-shadow bg-secondary ring-0 "
+            className="border-border border shadow-lg shadow-shadow bg-secondary rounded-xl overflow-hidden animate-in fade-in zoom-in-95"
           >
-            <SelectGroup>
+            <SelectGroup className="p-1">
               <SelectItem
-                className="hover:bg-primary text-primary-text"
+                className="hover:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] focus:text-info cursor-pointer rounded-lg text-primary-text px-3 font-medium transition-colors"
                 value={defaultValue}
-                defaultValue
               >
                 {defaultValueText}
               </SelectItem>
-              {list.map((item) => (
-                <SelectItem
-                  className="hover:bg-primary text-primary-text"
-                  value={item.toLowerCase()}
-                  key={item}
-                >
-                  {item}
-                </SelectItem>
-              ))}
+              {list.map((item) => {
+                if (item.toLowerCase() === defaultValue.toLowerCase()) return null;
+                return (
+                  <SelectItem
+                    className="hover:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] focus:bg-[color-mix(in_srgb,var(--color-info)_10%,transparent)] focus:text-info cursor-pointer rounded-lg text-primary-text px-3 font-medium transition-colors"
+                    value={item.toLowerCase()}
+                    key={item}
+                  >
+                    {item}
+                  </SelectItem>
+                );
+              })}
             </SelectGroup>
           </SelectContent>
         </Select>
