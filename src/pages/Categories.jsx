@@ -1,4 +1,5 @@
 import Button from "@/components/common/Button";
+import CategoryCard from "@/features/Category/components/CategoryCard";
 
 import React from "react";
 
@@ -13,6 +14,9 @@ function Categories() {
         <div className="m-2">
           <Button> + Add Category</Button>
         </div>
+      </div>
+      <div>
+        <CategoryCard name="Men" products="9" />
       </div>
     </div>
   );

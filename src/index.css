@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
 
 body {
   background-color: var(--bg-primary);
@@ -9,8 +9,7 @@ body {
   transition: 0.2s ease;
   margin: 0;
   padding: 0;
-  font-family: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,13 +18,4 @@ body {
 
 #root {
   min-height: 100vh;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: -0.02em;
 }

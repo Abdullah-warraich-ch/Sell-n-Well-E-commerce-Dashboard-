@@ -4,13 +4,21 @@ import { useMatch } from "react-router";
 
 function NavLink({ to, icon, text, onClick }) {
   const match = useMatch(to);
+  
   return (
     <Link
       to={to}
       onClick={onClick}
-      className={`flex gap-3 leading-6 text-[15px] font-medium tracking-[-0.01em] items-center px-4 py-3 rounded-xl lg:rounded-tr-lg lg:rounded-br-xl lg:rounded-tl-none lg:rounded-bl-none ${match ? "border border-info text-info bg-select lg:border-l-4 lg:border-t-0 lg:border-r-0 lg:border-b-0" : "hover:bg-primary text-secondary-text border border-transparent lg:border-l-0"}`}
+      className={`group flex items-center gap-3 px-4 py-3 mx-3 my-1 rounded-xl text-[14px] font-semibold transition-all duration-200 ${
+        match 
+          ? "bg-[color-mix(in_srgb,var(--color-info)_8%,transparent)] text-info" 
+          : "text-secondary-text hover:bg-[color-mix(in_srgb,var(--bg-primary)_80%,transparent)] hover:text-primary-text"
+      }`}
     >
-      {icon} <h3 className={`${match ? "text-primary-text" : ""}`}>{text}</h3>
+      <div className={`transition-transform duration-200 ${match ? "scale-110" : "group-hover:scale-[1.05]"}`}>
+        {icon}
+      </div>
+      <span>{text}</span>
     </Link>
   );
 }

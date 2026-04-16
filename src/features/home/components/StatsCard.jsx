@@ -27,11 +27,11 @@ function StatsCard({ title, subheading, desc, icon: Icon, color, trend }) {
       </div>
 
       <div className="z-10">
-        <div className="text-[28px] font-extrabold tracking-[-0.03em] text-primary-text mb-1.5">
+        <div className="text-[28px] font-semibold tracking-tight text-primary-text mb-1.5">
           {subheading}
         </div>
         <div className="flex items-center gap-1.5 text-[13px] font-medium text-secondary-text">
-          <span className={`flex items-center font-bold bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 rounded-md ${trendColor}`}>
+          <span className={`flex items-center font-semibold bg-[color-mix(in_srgb,currentColor_10%,transparent)] px-1.5 py-0.5 rounded-md ${trendColor}`}>
             {isPositive ? "+" : "-"}
             {descValue}
           </span>

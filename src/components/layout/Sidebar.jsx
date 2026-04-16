@@ -4,27 +4,35 @@ import Nav from "./Nav";
 
 function Sidebar({ onNavigate }) {
   return (
-    <aside className="bg-secondary h-full flex flex-col">
-      <div className="shrink-0 h-16 border-b border-border text-primary-text flex items-center justify-between px-4 lg:justify-center lg:px-0">
+    <aside className="bg-secondary h-full flex flex-col border-r border-border shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+      <div className="shrink-0 h-16 border-b border-border/60 text-primary-text flex items-center justify-between px-6 lg:justify-start gap-3">
         <img
           src="/ayn.png"
           alt="AYN"
-          className="h-9 w-auto object-contain"
+          className="h-8 w-auto object-contain"
         />
+        <span className="font-semibold text-[16px] tracking-tight hidden lg:block">AYN Store</span>
         <button
           type="button"
           onClick={onNavigate}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-primary text-primary-text lg:hidden"
+          className="inline-flex h-9 w-9 items-center justify-center rounded-lg hover:bg-primary text-secondary-text lg:hidden ml-auto transition-colors"
         >
           <X size={18} />
         </button>
       </div>
-      <div className="py-3 lg:py-6 flex-1 flex flex-col">
+      <div className="py-6 flex-1 flex flex-col overflow-y-auto home-scrollbar">
         <Nav onNavigate={onNavigate} />
       </div>
-      <div className="hidden text-sm shrink-0 border-t border-border text-secondary-text font-medium gap-0.5 lg:flex flex-col justify-center items-center h-16">
-        <span>Super User</span>
-        <p className="font-light">abdullahnasar333@gmail.com</p>
+      <div className="p-4 shrink-0 border-t border-border/60">
+        <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary transition-colors cursor-pointer group">
+          <div className="w-9 h-9 rounded-full bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] text-info flex items-center justify-center font-semibold text-sm shadow-sm group-hover:scale-105 transition-transform">
+            AM
+          </div>
+          <div className="flex flex-col">
+            <span className="text-sm font-semibold text-primary-text group-hover:text-info transition-colors">Admin User</span>
+            <span className="text-xs text-secondary-text font-medium truncate w-[130px] opacity-90">abdullah@email.com</span>
+          </div>
+        </div>
       </div>
     </aside>
   );
