@@ -6,6 +6,7 @@ import Products from "@/pages/Products";
 import Categories from "@/pages/Categories";
 import Sales from "@/pages/Sales";
 import Announce from "@/pages/Announce";
+import Login from "@/pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/login",
+    element: <Login />
+  }
 ]);
 
 export default router;

@@ -3,21 +3,23 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text);
-  transition: 0.2s ease;
+html, body {
   margin: 0;
   padding: 0;
+  border: none;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease;
   font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.5;
 }
 
 #root {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Custom Scrollbar */

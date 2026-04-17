@@ -4,8 +4,8 @@ import Nav from "./Nav";
 
 function Sidebar({ onNavigate }) {
   return (
-    <aside className="bg-secondary h-full flex flex-col border-r border-border shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
-      <div className="shrink-0 h-16 border-b border-border/60 text-primary-text flex items-center justify-between px-6 lg:justify-start gap-3">
+    <aside className="bg-secondary h-full flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
+      <div className="shrink-0 h-16 text-primary-text flex items-center justify-between px-6 lg:justify-start gap-3">
         <img
           src="/ayn.png"
           alt="AYN"

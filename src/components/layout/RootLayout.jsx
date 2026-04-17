@@ -21,7 +21,7 @@ function RootLayout() {
 
   return (
     <div className="flex min-h-screen w-full flex-col overflow-hidden lg:h-screen lg:flex-row">
-      <div className="hidden shrink-0 border-r border-border lg:block lg:w-72">
+      <div className="hidden shrink-0 lg:block lg:w-72">
         <Sidebar />
       </div>
 

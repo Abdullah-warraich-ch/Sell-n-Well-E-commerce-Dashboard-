@@ -19,7 +19,7 @@ function Header({ onMenuClick }) {
   }
 
   return (
-    <header className="bg-secondary/70 backdrop-blur-lg text-primary-text border-b border-border h-16 w-full flex justify-between px-4 sm:px-6 items-center sticky top-0 z-30 transition-all">
+    <header className="bg-secondary/70 backdrop-blur-lg text-primary-text h-16 w-full flex justify-between px-4 sm:px-6 items-center sticky top-0 z-30 transition-all">
       <div className="flex items-center gap-4">
         <button
           type="button"
