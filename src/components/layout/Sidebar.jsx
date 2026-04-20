@@ -29,7 +29,7 @@ function Sidebar({ onNavigate }) {
       <div className="p-4 shrink-0 border-t border-border/60">
         <div className="flex items-center gap-3 p-3 rounded-xl transition-colors ">
           <div className="w-9 h-9 rounded-full bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] text-info flex items-center justify-center font-semibold text-sm shadow-sm group-hover:scale-105 transition-transform">
-            AM
+            {user.email.charAt(0).toUpperCase()}
           </div>
           <div className="flex">
             <div className="flex flex-col">
