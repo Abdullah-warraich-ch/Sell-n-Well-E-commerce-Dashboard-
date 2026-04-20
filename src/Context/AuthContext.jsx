@@ -40,7 +40,11 @@ export const AuthProvider = ({ children }) => {
             console.log("Login Success", reponse);
         } catch (error) {
             console.log(error);
-            setErrorMsg("Password Theek Lga");
+            if (email === "abdullah@arooma.com") {
+                setErrorMsg("Warraich Sahb Password Theek lgayein ❤️");
+            } else {
+                setErrorMsg("Behn K Lund Password Sahi Lga 😡");
+            }
         } finally {
             setLoading(false);
         }
