@@ -12,6 +12,7 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const [errorMsg, setErrorMsg] = useState("");
+    const [errorType, setErrorType] = useState("danger");
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -42,8 +43,10 @@ export const AuthProvider = ({ children }) => {
             console.log(error);
             if (email === "abdullah@arooma.com") {
                 setErrorMsg("Warraich Sahb Password Theek lgayein ❤️");
+                setErrorType("success");
             } else {
                 setErrorMsg("Behn K Lund Password Sahi Lga 😡");
+                setErrorType("danger");
             }
         } finally {
             setLoading(false);
@@ -55,6 +58,7 @@ export const AuthProvider = ({ children }) => {
         loading,
         login,
         errorMsg,
+        errorType,
         logout
     };
 

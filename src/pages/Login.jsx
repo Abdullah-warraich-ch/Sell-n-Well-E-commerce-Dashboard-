@@ -6,7 +6,7 @@ import { useAuth } from '../Context/AuthContext'
 
 function Login() {
 
-    const { user, login, errorMsg, loading } = useAuth()
+    const { user, login, errorMsg, errorType, loading } = useAuth()
     console.log(user)
 
 
@@ -19,7 +19,10 @@ function Login() {
                 </div>
 
                 {errorMsg && (
-                    <div className='w-full p-3 text-sm text-danger bg-danger/10 border border-danger/20 rounded-xl text-center animate-in fade-in zoom-in duration-300'>
+                    <div className={`w-full p-3 text-sm rounded-xl text-center animate-in fade-in zoom-in duration-300 border ${errorType === 'success'
+                            ? 'text-success bg-success/10 border-success/20'
+                            : 'text-danger bg-danger/10 border-danger/20'
+                        }`}>
                         {errorMsg}
                     </div>
                 )}

@@ -4,7 +4,8 @@ import Nav from "./Nav";
 import { useAuth } from "@/Context/AuthContext";
 
 function Sidebar({ onNavigate }) {
-  const { logout } = useAuth()
+  const { logout, user } = useAuth()
+  console.log(user.email);
   return (
     <aside className="bg-secondary h-full flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
       <div className="shrink-0 h-16 text-primary-text flex items-center justify-between px-6 lg:justify-start gap-3">
@@ -32,8 +33,8 @@ function Sidebar({ onNavigate }) {
           </div>
           <div className="flex">
             <div className="flex flex-col">
-              <span className="text-sm font-semibold text-primary-text group-hover:text-info transition-colors">Admin User</span>
-              <span className="text-xs text-secondary-text font-medium truncate w-[130px] opacity-90">abdullah@email.com</span>
+              <span className="text-sm font-semibold text-primary-text group-hover:text-info transition-colors">{user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1)}</span>
+              <span className="text-xs text-secondary-text font-medium truncate w-[130px] opacity-90">{user.email}</span>
             </div>
             <button onClick={logout} className="flex items-center gap-2 text-danger hover:bg-primary p-2 rounded cursor-pointer"><LogOut /></button>
           </div>
