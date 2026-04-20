@@ -1,8 +1,10 @@
 import React from "react";
-import { X } from "lucide-react";
+import { X, LogOut } from "lucide-react";
 import Nav from "./Nav";
+import { useAuth } from "@/Context/AuthContext";
 
 function Sidebar({ onNavigate }) {
+  const { logout } = useAuth()
   return (
     <aside className="bg-secondary h-full flex flex-col shadow-[4px_0_24px_rgba(0,0,0,0.02)]">
       <div className="shrink-0 h-16 text-primary-text flex items-center justify-between px-6 lg:justify-start gap-3">
@@ -24,13 +26,16 @@ function Sidebar({ onNavigate }) {
         <Nav onNavigate={onNavigate} />
       </div>
       <div className="p-4 shrink-0 border-t border-border/60">
-        <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-primary transition-colors cursor-pointer group">
+        <div className="flex items-center gap-3 p-3 rounded-xl transition-colors ">
           <div className="w-9 h-9 rounded-full bg-[color-mix(in_srgb,var(--color-info)_15%,transparent)] text-info flex items-center justify-center font-semibold text-sm shadow-sm group-hover:scale-105 transition-transform">
             AM
           </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-semibold text-primary-text group-hover:text-info transition-colors">Admin User</span>
-            <span className="text-xs text-secondary-text font-medium truncate w-[130px] opacity-90">abdullah@email.com</span>
+          <div className="flex">
+            <div className="flex flex-col">
+              <span className="text-sm font-semibold text-primary-text group-hover:text-info transition-colors">Admin User</span>
+              <span className="text-xs text-secondary-text font-medium truncate w-[130px] opacity-90">abdullah@email.com</span>
+            </div>
+            <button onClick={logout} className="flex items-center gap-2 text-danger hover:bg-primary p-2 rounded cursor-pointer"><LogOut /></button>
           </div>
         </div>
       </div>

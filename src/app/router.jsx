@@ -7,11 +7,14 @@ import Categories from "@/pages/Categories";
 import Sales from "@/pages/Sales";
 import Announce from "@/pages/Announce";
 import Login from "@/pages/Login";
+import ProtectedRoute from "./protectedRoutes";
+import PublicRoute from "./PublicRoute";
+import NotFound from "@/pages/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootLayout />,
+    element: <ProtectedRoute><RootLayout /></ProtectedRoute>,
     children: [
       {
         index: true,
@@ -41,7 +44,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />
+    element: <PublicRoute><Login /></PublicRoute>
+  },
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
 

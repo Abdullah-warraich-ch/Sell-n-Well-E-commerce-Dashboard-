@@ -2,30 +2,13 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import auth from '../firebase'
+import { useAuth } from '../Context/AuthContext'
 
 function Login() {
-    const navigate = useNavigate()
-    const [loading, setLoading] = useState(false)
-    const [errorMsg, setErrorMsg] = useState('')
 
-    const handleLogin = async (e) => {
-        e.preventDefault()
-        setErrorMsg('')
-        setLoading(true)
-        const email = e.target.email.value
-        const password = e.target.password.value
-        try {
-            const reponse = await signInWithEmailAndPassword(auth, email, password)
-            navigate('/')
-            console.log("Login Success", reponse)
+    const { user, login, errorMsg, loading } = useAuth()
+    console.log(user)
 
-        } catch (error) {
-            console.log(error)
-            setErrorMsg('Password Theek Lga Gando 😠')
-        } finally {
-            setLoading(false)
-        }
-    }
 
     return (
         <div className='flex items-center justify-center min-h-screen bg-primary'>
@@ -41,13 +24,14 @@ function Login() {
                     </div>
                 )}
 
-                <form className='flex flex-col gap-5 w-full' onSubmit={handleLogin}>
+                <form className='flex flex-col gap-5 w-full' onSubmit={login}>
                     <div className='flex flex-col gap-4'>
                         <div className='flex flex-col gap-1.5'>
                             <label htmlFor='email' className='text-sm font-medium text-primary-text ml-1'>Email</label>
                             <input
                                 type='email'
                                 id='email'
+                                name='email'
                                 required
                                 className='p-3 rounded-xl border border-border text-sm font-normal bg-input text-primary-text focus:outline-none focus:ring-2 focus:ring-button/50 focus:border-button transition-all duration-200 w-full'
                                 placeholder='name@example.com'
@@ -58,6 +42,7 @@ function Login() {
                             <input
                                 type='password'
                                 id='password'
+                                name='password'
                                 required
                                 className='p-3 rounded-xl border border-border text-sm font-normal bg-input text-primary-text focus:outline-none focus:ring-2 focus:ring-button/50 focus:border-button transition-all duration-200 w-full'
                                 placeholder='••••••••'
