@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import auth from '../firebase'
+
 import { useAuth } from '../Context/AuthContext'
 
 function Login() {
@@ -20,8 +18,8 @@ function Login() {
 
                 {errorMsg && (
                     <div className={`w-full p-3 text-sm rounded-xl text-center animate-in fade-in zoom-in duration-300 border ${errorType === 'success'
-                            ? 'text-success bg-success/10 border-success/20'
-                            : 'text-danger bg-danger/10 border-danger/20'
+                        ? 'text-success bg-success/10 border-success/20'
+                        : 'text-danger bg-danger/10 border-danger/20'
                         }`}>
                         {errorMsg}
                     </div>
